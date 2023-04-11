@@ -1,0 +1,23 @@
+<h1> To-do-List </h1>
+<h2> All Tasks </h2>
+<table>
+    <tr> 
+        <th> Name </th>
+        <th> Description </th>
+        <th> Done </th>
+        <th> Created At </th>
+        <th> Operations </th>
+    </tr>
+    <% @tasks.each do |task| %>
+            <tr>
+            <td> <%= task.name %> </td>
+            <td> <%= task.description %> </td>
+            <td> <%= task.done %> </td>
+            <td> <%= task.created_at %> </td>
+            <td> <%= link_to("show", task_path(task.id)) %> <%= link_to("edit", edit_task_path(task.id)) %> <%= link_to("delete", delete_task_path(task.id)) %>
+            <td> <%=  %>
+            
+        </tr>
+    <%end%>
+</table>
+<%= link_to "add-new-task", new_task_path %>

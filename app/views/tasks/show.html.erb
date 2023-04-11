@@ -1,0 +1,15 @@
+<h1> This is the show page </h1>
+<table>
+    <tr>
+        <th> Name </th>
+        <th> Description </th>
+        <th> Done </th>
+    </tr>
+    <tr>
+        <td> <%= @task.name %> </td>
+        <td> <%= @task.description %> </td>
+        <td> <%= @task.done %> </td>
+    </tr>
+</table>
+<%= link_to "back-to-tasks", tasks_path %>
+

@@ -1,0 +1,8 @@
+<h1>Categories#Index</h1>
+
+<ul>
+    <% @categories.each do |category| %>
+    <li> <%=category.name %>
+    <li> <%= link_to "view-all-tasks", {controller: tasks, action:index, id:category.id} %>
+    <% end %>
+</ul>
